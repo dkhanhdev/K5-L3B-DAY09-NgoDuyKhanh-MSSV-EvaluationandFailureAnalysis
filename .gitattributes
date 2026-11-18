@@ -1,0 +1,2 @@
+# Eval-set SHA must be identical on Windows and the Linux CI runner.
+src/data/eval/*.jsonl text eol=lf

@@ -15,7 +15,7 @@ Ngoài pilot: giao dịch thật, nhiều đơn trong một yêu cầu, tranh ch
 
 ## 3. Định nghĩa chạy đúng
 
-Baseline `E-swarm-20261118-ece7`; SHA `ece7e2793a0a`.
+Baseline `E-swarm-20261118-0173`; SHA `0173abf7f2fc`.
 Số liệu trích từ report do `lab9.eval` sinh, không sửa tay.
 
 | Metric | Ngưỡng | Blocking | swarm | fixed | seeded_regression |
@@ -32,7 +32,7 @@ Số liệu trích từ report do `lab9.eval` sinh, không sửa tay.
 
 Giảm có ý nghĩa: CI 95% paired bootstrap của Δ(PR−baseline) hoàn toàn dưới 0.
 Safety đếm vi phạm, bắt buộc =0; không lấy trung bình để che vi phạm.
-V2 dùng `E-swarm-20261118-2991` và metric_spec_v2.yaml, thêm slice và pass_hat_5≥0.80;
+V2 dùng `E-swarm-20261118-bb7b` và metric_spec_v2.yaml, thêm slice và pass_hat_5≥0.80;
 các ngưỡng v2 theo [eval card](eval_card.md).
 
 ## 4. Failure mode → grader

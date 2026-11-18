@@ -1,6 +1,6 @@
 # Trace case — C-002@11
 
-Report lỗi: `E-seeded_regression-20261118-ece7`; baseline `E-swarm-20261118-ece7`.
+Report lỗi: `E-seeded_regression-20261118-0173`; baseline `E-swarm-20261118-0173`.
 Tái lập: `python -m lab9.trace_case --shape seeded_regression --claim C-002 --seed 11`;
 đối chứng đổi shape thành `fixed`.
 

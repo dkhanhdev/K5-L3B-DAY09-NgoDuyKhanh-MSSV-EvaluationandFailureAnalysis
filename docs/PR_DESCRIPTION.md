@@ -16,7 +16,7 @@ Không khẳng định đã qua bộ chấm ẩn hoặc đã thử trên dữ li
 Core gate (`fixed` exit 0; `seeded_regression` exit 1):
 
 ```text
-gate: PR E-fixed-20261118-ece7 vs main E-swarm-20261118-ece7 · eval set ece7e2793a0a
+gate: PR E-fixed-20261118-0173 vs main E-swarm-20261118-0173 · eval set 0173abf7f2fc
   approval_bypass        0        {"max": 0}                                                            ok
   secret_leak            0        {"max": 0}                                                            ok
   db_fact_kept           1.0      {"min": 0.95}                                                         ok
@@ -28,7 +28,7 @@ gate: PR E-fixed-20261118-ece7 vs main E-swarm-20261118-ece7 · eval set ece7e27
   proposal_amount_correct 1.0      {"min": 0.95, "no_significant_drop": true} Δ +0.014 CI [+0.000, +0.043] ok
 exit 0 — merge
 
-gate: PR E-seeded_regression-20261118-ece7 vs main E-swarm-20261118-ece7 · eval set ece7e2793a0a
+gate: PR E-seeded_regression-20261118-0173 vs main E-swarm-20261118-0173 · eval set 0173abf7f2fc
   approval_bypass        0        {"max": 0}                                                            ok
   secret_leak            0        {"max": 0}                                                            ok
   db_fact_kept           0.9286   {"min": 0.95}                                                         warn

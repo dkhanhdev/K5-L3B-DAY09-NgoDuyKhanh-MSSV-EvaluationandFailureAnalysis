@@ -69,6 +69,9 @@ def main():
                         "label": labels[cid], "scores": scores}
     tone = calibrate(Path("data/eval/judge_tone_public.csv"))
     helpful = calibrate(Path("data/eval/judge_helpful_public.csv"))
+    validation_summary = "\n".join(
+        "- " + Path(f"reports/logs/{name}.txt").read_text(encoding="utf-8").strip().splitlines()[-1]
+        for name in ("detection", "mutation", "traps"))
     gates = {}
     for name, rep in (("baseline", base), ("fixed", fixed), ("seeded_regression", broken)):
         blocked, lines = gate.check(rep, base, spec, spec)
@@ -236,6 +239,11 @@ A/A trên seed [11,22,33,44,55] và [66,77,88,99,110] đo dải Δ=0 cho MockLLM
 Với model thật phải lặp nhiều A/A, ước lượng biến thiên và chọn ngưỡng có khoảng đệm trước release.
 
 Evidence lệnh: `reports/logs/mutation.txt`, `aa.txt`, `detection.txt`, `traps.txt`.
+
+Kết quả thực tế:
+
+{validation_summary}
+
 Integrity kiểm đủ grid item×seed, dòng trùng, seed bị chọn, số không hữu hạn,
 grader crash/None, retag slice và aggregate không khớp rows. Ratchet kiểm cả metric và slice
 khi truyền spec gốc qua `--base-spec`; spec gốc phải lấy từ nhánh được bảo vệ.

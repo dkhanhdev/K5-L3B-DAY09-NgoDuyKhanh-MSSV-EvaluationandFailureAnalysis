@@ -1,4 +1,4 @@
-gate: PR E-slice_regression-20261118-2991 vs main E-swarm-20261118-2991 · eval set 2991019f2508
+gate: PR E-slice_regression-20261118-bb7b vs main E-swarm-20261118-bb7b · eval set bb7b4a9266bd
   INTEGRITY PR: row count differs from items x seeds
   INTEGRITY PR: incomplete item/seed grid
   INTEGRITY PR: invalid aggregate pass_at_3

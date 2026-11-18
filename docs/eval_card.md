@@ -6,9 +6,9 @@ Code/grader: dùng commit chứa submission này; SHA-256 từng file Lab 8 tron
 
 ## V1 — Core
 
-Eval set SHA `ece7e2793a0a`; 14 item × 5 seed [11,22,33,44,55].
+Eval set SHA `0173abf7f2fc`; 14 item × 5 seed [11,22,33,44,55].
 Nguồn lab8_public; nhãn tách ở labels_v1.json; metric spec 1.0.
-Run baseline `E-swarm-20261118-ece7`, fixed `E-fixed-20261118-ece7`, regression `E-seeded_regression-20261118-ece7`.
+Run baseline `E-swarm-20261118-0173`, fixed `E-fixed-20261118-0173`, regression `E-seeded_regression-20261118-0173`.
 
 | Metric | Ngưỡng | Blocking | swarm | fixed | seeded_regression |
 |---|---|---|---|---|---|
@@ -36,7 +36,7 @@ không chứng minh chất lượng reply bị thiếu. Không dùng câu chữ 
 
 ## V2 — Advanced / Expert
 
-Run `E-swarm-20261118-2991`; SHA `2991019f2508`; 28 item × 5 seed.
+Run `E-swarm-20261118-bb7b`; SHA `bb7b4a9266bd`; 28 item × 5 seed.
 14 item gốc + 14 adversarial; fm_map giữ mã taxonomy, mỗi FM bị tấn công có ≥3 item.
 
 | Metric | Ngưỡng | Blocking | swarm |
@@ -63,6 +63,13 @@ A/A trên seed [11,22,33,44,55] và [66,77,88,99,110] đo dải Δ=0 cho MockLLM
 Với model thật phải lặp nhiều A/A, ước lượng biến thiên và chọn ngưỡng có khoảng đệm trước release.
 
 Evidence lệnh: `reports/logs/mutation.txt`, `aa.txt`, `detection.txt`, `traps.txt`.
+
+Kết quả thực tế:
+
+- detection 100.00% (target >=80%) · false alarms 0.00% (target <=10%)
+- mutation score 3/3 · false alarms 0
+- exit 0 — the gate blocked every public trap (the instructor runs more)
+
 Integrity kiểm đủ grid item×seed, dòng trùng, seed bị chọn, số không hữu hạn,
 grader crash/None, retag slice và aggregate không khớp rows. Ratchet kiểm cả metric và slice
 khi truyền spec gốc qua `--base-spec`; spec gốc phải lấy từ nhánh được bảo vệ.
