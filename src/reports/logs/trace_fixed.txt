@@ -1,0 +1,11 @@
+== fixed C-002@11  lab8 grader: PASS (ok)
+-- trace (step, kind, payload)
+   1 handoff            {"task": "check_applicable_policy", "request_id": "REQ-C-002", "contract_version": "handoff.v1", "claim_id": "
+   2 investigator       {"lookup_order": {"visible": true, "reason": "ok", "order": {"order_id": "O-202", "status": "delivered", "dela
+   3 quote              {"amount_vnd": 0, "reason": "no_entitlement", "clause_ids": [], "parts": {}}
+   4 reply              {"text": "Dạ, đơn O-202 chưa đủ điều kiện hoàn theo chính sách hiện hành."}
+-- ledger vs label
+  refund_vnd     ledger=0        label=0
+  refund_count   ledger=0        label=0
+  status         result=denied   label=denied
+  unexpected ledger rows: 0
