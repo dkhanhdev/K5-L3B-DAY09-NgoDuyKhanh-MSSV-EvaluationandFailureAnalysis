@@ -1,0 +1,3 @@
+gate: PR E-slice_regression-20261118-bb7b vs main E-swarm-20261118-bb7b · eval set bb7b4a9266bd
+  INTEGRITY PR: missing/nonfinite/invalid graded row value
+exit 1 — blocked: integrity

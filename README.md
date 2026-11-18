@@ -1,5 +1,29 @@
 # K5 · Day 9 · Lab — Evaluation & Failure Analysis (LogiX-VN)
 
+## Bản làm bài — Ngô Duy Khánh · 2A202603870
+
+Đã triển khai M0–M7: taxonomy và eval set v1/v2, calibration, graders, bootstrap,
+slice gate, reliability metrics, integrity và ratchet. Source Lab 8 được chép từ
+thư mục Lab 8 đã cung cấp; giữ nguyên `src/lab8/`.
+
+- Kết quả và giới hạn: [eval card](docs/eval_card.md).
+- Bằng chứng chạy: `src/reports/verification.json` và `src/reports/logs/`.
+- Phân tích: [taxonomy](docs/failure_taxonomy.md), [trace case](docs/trace_case.md),
+  [judge audit](docs/judge_audit.md), [PRD v1.1](docs/PRD_v1.1.md).
+- Lệnh tái lập toàn bộ từ `src/`: `python -m lab9.verify`.
+  Lệnh sinh lại report bằng harness và dựng tài liệu từ số liệu thực.
+- Chỉ dựng lại tài liệu/bằng chứng trace từ report hiện có: `python -m lab9.writeup`.
+
+Windows, sau khi đã cài dependency trong `.venv` ở thư mục gốc:
+
+```powershell
+cd src
+..\.venv\Scripts\python.exe -m lab9.verify
+```
+
+Quy trình nộp và bài tập gốc được giữ bên dưới. Kết quả kiểm tra local không đồng nghĩa
+đã chạy GitHub Actions hoặc đã được giảng viên phê duyệt.
+
 > Nối tiếp Lab 8. Lab 8 trả lời "agent có chạy không"; Lab 9 trả lời **"làm sao biết bản mới tốt hơn — và chặn được bản tệ trước khi merge"**.
 > Không cần API key: MockLLM + judge replay. **Không Langfuse / OTel** (observability học ở Day 14).
 
