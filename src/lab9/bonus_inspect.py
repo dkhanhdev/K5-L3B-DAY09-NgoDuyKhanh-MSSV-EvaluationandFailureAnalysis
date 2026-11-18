@@ -73,6 +73,10 @@ def replay_cases(source: Path) -> list[dict]:
     cases = []
     for fm, entry in sorted(evidence.items()):
         for kind in ("trial", "control"):
+            if str(entry[kind].get("lab8_reason", "")).startswith("exception:"):
+                raise ValueError(f"Cannot compare a failed replay: {fm}/{kind}")
+            if kind == "control" and not entry[kind].get("lab8_pass"):
+                raise ValueError(f"Fixed control must pass: {fm}")
             cases.append({"id": f"{fm}/{kind}", "source": "captured_trace",
                           "trial": entry[kind], "label": entry["label"]})
     # Exhaustive small boundary grid. Includes both bypass branches, zero refunds,

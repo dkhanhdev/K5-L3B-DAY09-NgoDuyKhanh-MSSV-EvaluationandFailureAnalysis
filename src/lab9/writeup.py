@@ -35,6 +35,7 @@ def metric_table(spec, reports):
 
 
 def main():
+    variants.register()
     DOCS.mkdir(exist_ok=True)
     spec = load_spec()
     v2 = load_spec(Path("config/metric_spec_v2.yaml"))
@@ -61,6 +62,8 @@ def main():
             trial = make_task(shape, world, claims, labels, Path(tmp))({"claim_id": cid, "seed": 11})
         with tempfile.TemporaryDirectory(prefix="lab9-control-", ignore_cleanup_errors=True) as tmp:
             control = make_task("fixed", world, claims, labels, Path(tmp))({"claim_id": cid, "seed": 11})
+        if not control["lab8_pass"] or not control["events"]:
+            raise RuntimeError(f"Invalid fixed control for {fm}: {control['lab8_reason']}")
         step = next(i for i, e in enumerate(trial["events"], 1) if e["kind"] == kind)
         scores = {mid: grader().evaluate(SimpleNamespace(output=trial, expected_output=labels[cid])).value
                   for mid, grader in GRADERS.items()}

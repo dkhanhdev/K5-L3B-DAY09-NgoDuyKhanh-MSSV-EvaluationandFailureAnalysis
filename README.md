@@ -2,6 +2,9 @@
 
 ## Bản làm bài — Ngô Duy Khánh · 2A202603870
 
+**Demo thuyết trình:** mở [demo/index.html](demo/index.html) trực tiếp bằng trình duyệt.
+Một file HTML offline, 6 phần tương tác; [kịch bản demo](demo/README.md).
+
 Đã triển khai M0–M7: taxonomy và eval set v1/v2, calibration, graders, bootstrap,
 slice gate, reliability metrics, integrity và ratchet. Source Lab 8 được chép từ
 thư mục Lab 8 đã cung cấp; giữ nguyên `src/lab8/`.

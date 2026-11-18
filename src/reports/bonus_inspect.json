@@ -51,8 +51,8 @@
       "case_id": "FM-01/control",
       "source": "captured_trace",
       "metric": "refund_amount_correct",
-      "pydantic_evals": false,
-      "inspect_ai": false,
+      "pydantic_evals": true,
+      "inspect_ai": true,
       "match": true
     },
     {
@@ -195,8 +195,8 @@
       "case_id": "FM-04/control",
       "source": "captured_trace",
       "metric": "refund_amount_correct",
-      "pydantic_evals": false,
-      "inspect_ai": false,
+      "pydantic_evals": true,
+      "inspect_ai": true,
       "match": true
     },
     {
@@ -243,8 +243,8 @@
       "case_id": "FM-05/control",
       "source": "captured_trace",
       "metric": "refund_amount_correct",
-      "pydantic_evals": false,
-      "inspect_ai": false,
+      "pydantic_evals": true,
+      "inspect_ai": true,
       "match": true
     },
     {
@@ -339,8 +339,8 @@
       "case_id": "FM-07/control",
       "source": "captured_trace",
       "metric": "refund_amount_correct",
-      "pydantic_evals": false,
-      "inspect_ai": false,
+      "pydantic_evals": true,
+      "inspect_ai": true,
       "match": true
     },
     {
@@ -387,8 +387,8 @@
       "case_id": "FM-08/control",
       "source": "captured_trace",
       "metric": "refund_amount_correct",
-      "pydantic_evals": false,
-      "inspect_ai": false,
+      "pydantic_evals": true,
+      "inspect_ai": true,
       "match": true
     },
     {
@@ -1600,6 +1600,6 @@
       "match": true
     }
   ],
-  "source_sha256": "e2fb25ad183e95634850e09f76d8ce2c59737d0ab3a68f30aac606f5bf6723d6",
-  "replay_sha256": "36bd907d71fe012b7091582e5dbe9cf8ae654d366fbe77f0f895b2a7ed513f1c"
+  "source_sha256": "18c6cfc7f007dd0456a88c295a0ffff09a49d3851d1ec1e2d7d1b0fab55f6d96",
+  "replay_sha256": "d2d37c53dcafaf28ab1223b554b47bf8a8bc8add4cad21bf0a328968e39db75e"
 }
