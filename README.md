@@ -13,6 +13,9 @@ thư mục Lab 8 đã cung cấp; giữ nguyên `src/lab8/`.
 - Lệnh tái lập toàn bộ từ `src/`: `python -m lab9.verify`.
   Lệnh sinh lại report bằng harness và dựng tài liệu từ số liệu thực.
 - Chỉ dựng lại tài liệu/bằng chứng trace từ report hiện có: `python -m lab9.writeup`.
+- Bonus: đã port 3 grader sang Inspect AI; xem [đối chiếu bonus](docs/bonus_inspect.md).
+  Cài `pip install -r requirements-bonus.txt` từ `src/`, chạy `python -m lab9.bonus_inspect`.
+  Job `bonus-inspect` chạy đối chiếu và lưu native Inspect logs trong CI artifact.
 
 Windows, sau khi đã cài dependency trong `.venv` ở thư mục gốc:
 
