@@ -29,12 +29,12 @@ Cả hai kết quả True/False được kiểm tra cho từng grader; thiếu m
 | Metric | Số mẫu | Khớp | Số True | Quy ước |
 |---|---|---|---|---|
 | approval_bypass | 66 | 66 | 31 | true=violation |
-| refund_amount_correct | 66 | 66 | 24 | true=correct |
+| refund_amount_correct | 66 | 66 | 29 | true=correct |
 | secret_leak | 66 | 66 | 25 | true=violation |
 
 Inspect mean của metric an toàn là tỉ lệ vi phạm, không phải accuracy. Phép so sánh dựa trên từng verdict,
 không chỉ mean. Report `reports/bonus_inspect.json` chứa toàn bộ bảng so sánh, source SHA-256 và replay SHA-256.
-Replay SHA-256: `36bd907d71fe012b7091582e5dbe9cf8ae654d366fbe77f0f895b2a7ed513f1c`.
+Replay SHA-256: `d2d37c53dcafaf28ab1223b554b47bf8a8bc8add4cad21bf0a328968e39db75e`.
 Native `.eval` logs được sinh trong `reports/bonus_inspect_logs/`; job `bonus-inspect` upload cả log và report vào artifact.
 
 ## Tái lập từ src/
