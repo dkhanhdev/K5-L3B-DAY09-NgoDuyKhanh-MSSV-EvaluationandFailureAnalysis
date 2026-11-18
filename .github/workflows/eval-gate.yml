@@ -94,3 +94,24 @@ jobs:
         run: git show "${BASE_SHA}:src/config/metric_spec_v2.yaml" > "$RUNNER_TEMP/metric_spec_base_v2.yaml"
       - if: steps.has.outputs.v2
         run: python -m lab9.mutation --spec config/metric_spec_v2.yaml --baseline reports/baseline_v2.json --base-spec "$RUNNER_TEMP/metric_spec_base_v2.yaml"
+
+  bonus-inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env: {PYTHONUTF8: "1"}
+    defaults: {run: {working-directory: src}}
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2
+        with: {python-version: "3.13", activate-environment: true, enable-cache: true, cache-dependency-glob: "src/requirements*.txt"}
+      - run: uv pip install -r requirements.txt -r requirements-lab9.txt -r requirements-bonus.txt
+      - name: Compare three independent Inspect scorers against the original graders
+        run: python -m lab9.bonus_inspect --out reports/bonus_inspect_ci.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bonus-inspect-evidence
+          path: |
+            src/reports/bonus_inspect_ci.json
+            src/reports/bonus_inspect_logs/
